@@ -1,8 +1,9 @@
 # Reproducibility status
 
-This is an evidence-based status page for the audited research snapshot. A
-checked item means the repository itself supports the claim; it does not mean
-the manuscript's tables have been rerun.
+This is an evidence-based status page for the audited implementation snapshot.
+A checked item means the private implementation supported the claim at audit
+time; the public demo repository does not contain the model implementation,
+and the manuscript's tables have not been rerun.
 
 ## Present
 

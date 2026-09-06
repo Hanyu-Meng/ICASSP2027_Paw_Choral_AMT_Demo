@@ -44,6 +44,8 @@ GitHub Pages link above is the intended public entry point.
 
 ## License
 
-Site source is released under Apache License 2.0. The license does not grant
-rights to datasets, recordings, annotations, checkpoints, or generated media;
-see `assets/manifest.json` for the included visualization.
+Site source is released under Apache License 2.0. The included visualization
+is copyright 2026 Hanyu Meng, all rights reserved, and is not covered by the
+source license. The license also does not grant rights to datasets, recordings,
+annotations, checkpoints, or other generated media; see
+`assets/manifest.json` for details.
