@@ -1,4 +1,4 @@
-# PawCT interactive demo
+# PawCT project page
 
 Public project page for **“Toward Part-Aware Choral Transcription with
 Singing Voice Assignment.”**
@@ -7,9 +7,8 @@ Singing Voice Assignment.”**
 [https://hanyu-meng.github.io/ICASSP2027_Paw_Choral_AMT_Demo/](https://hanyu-meng.github.io/ICASSP2027_Paw_Choral_AMT_Demo/)
 
 PawCT transcribes one mixed choral recording into note-level soprano, alto,
-tenor, and bass parts. This dependency-free site presents the method,
-manuscript-reported results, and an interactive view of the paper's
-qualitative comparison.
+tenor, and bass parts. This dependency-free academic project page presents the
+method, manuscript-reported results, and the paper's qualitative comparison.
 
 ## Scientific status
 
@@ -20,7 +19,7 @@ access-controlled while its experiment provenance is being frozen.
 
 ## Contents
 
-- `index.html`, `styles.css`, `app.js`: the static project page;
+- `index.html` and `styles.css`: the static project page;
 - `assets/`: an author-generated piano-roll comparison and rights manifest;
 - `CODE_WALKTHROUGH.md`: English method and code walkthrough;
 - `CODE_WALKTHROUGH.zh-CN.md`: concise Chinese walkthrough;
