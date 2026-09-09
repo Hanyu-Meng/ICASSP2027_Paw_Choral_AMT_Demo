@@ -12,8 +12,8 @@ and the manuscript's tables have not been rerun.
 - [x] Per-voice, union, and presence losses.
 - [x] PagCT and note-level BiLSTM Post-VA implementations.
 - [x] Merged and SATB evaluation at 50/100 ms onset tolerance.
-- [x] Manuscript Figure 3 generation path and matching example identifier.
-- [x] Figure 3 source recording linked to the official YouChorale metadata and
+- [x] Manuscript qualitative-figure generation path and matching example identifier.
+- [x] Qualitative example source recording linked to the official YouChorale metadata and
       opened from its original host without redistributing an audio file.
 - [x] Validation/test probability separation and validation-default threshold search.
 - [x] Public paths, declared dependencies, upstream attribution, and release scan.
@@ -27,7 +27,7 @@ and the manuscript's tables have not been rerun.
 - [ ] Offline seven-transposition generation code and alignment tests.
 - [ ] Checkpoint files with SHA-256, config, environment, and load-key audit.
 - [ ] Validation-loss early stopping or corrected manuscript description.
-- [ ] A single command that regenerates Tables 1 and 2 within a tolerance.
+- [ ] A single command that regenerates Tables 1-3 within a tolerance.
 - [ ] VA/retention metric code tied to the exact numerator and denominator.
 - [ ] Direct audio-to-four-track SATB MIDI CLI.
 - [ ] PagCT parity, data-integrity, and real-data integration tests.

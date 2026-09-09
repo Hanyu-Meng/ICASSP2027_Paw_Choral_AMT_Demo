@@ -12,6 +12,28 @@
       "recording_id": "jd2_r4PK5dc",
       "contents": "Ground truth, PawCT, PagCT, and PagCT + Post-VA piano rolls from the manuscript example",
       "rights_note": "Published here by the visualization author for research communication. No source audio, annotation file, or MIDI is redistributed. Permission is required for reuse."
+    },
+    {
+      "path": "task-overview.png",
+      "sha256": "d0ee66654dba87f4167afe50235bf01e6b87675e1f60d475493d3b8af4638d48",
+      "kind": "manuscript Figure 1",
+      "source_file": "latex/Images/Figure1_intro_v2.pdf",
+      "contents": "Part-agnostic versus part-aware choral transcription task overview",
+      "license": "Author-owned manuscript figure; not included under the repository's Apache-2.0 source license"
+    },
+    {
+      "path": "method-overview.png",
+      "sha256": "a8b97175219798234a9f5c4df01654b12261818f384efcf12f5686ce77939911",
+      "kind": "manuscript Figure 2",
+      "source_file": "latex/Images/ICASSP2027_Fig2.png",
+      "contents": "PawCT, PagCT, and Post-VA architecture overview",
+      "license": "Author-owned manuscript figure; not included under the repository's Apache-2.0 source license"
+    },
+    {
+      "path": "ICASSP2027_PawCT.pdf",
+      "sha256": "6972c0d83fc658b7db6ba53d93eca98f2eabf0a73f6ded7554da80adee81f931",
+      "kind": "manuscript PDF",
+      "license": "Author-owned manuscript; not included under the repository's Apache-2.0 source license"
     }
   ],
   "external_media": [

@@ -9,7 +9,8 @@ Singing Voice Assignment.”**
 PawCT transcribes one mixed choral recording into note-level soprano, alto,
 tenor, and bass parts. This dependency-free academic project page presents the
 method, complete manuscript-reported result tables, the paper's qualitative
-comparison, and a link to its corresponding source recording.
+comparison, the manuscript figures, and a link to its corresponding source
+recording.
 
 ## Scientific status
 
@@ -21,7 +22,10 @@ access-controlled while its experiment provenance is being frozen.
 ## Contents
 
 - `index.html` and `styles.css`: the static project page;
-- `assets/`: an author-generated piano-roll comparison and rights manifest;
+- `assets/ICASSP2027_PawCT.pdf`: the current manuscript PDF;
+- `assets/task-overview.png` and `assets/method-overview.png`: manuscript Figures 1 and 2;
+- `assets/exsultate-deo-four-panel.png`: the qualitative piano-roll comparison;
+- `assets/manifest.json`: asset provenance and rights notes;
 - `CODE_WALKTHROUGH.md`: English method and code walkthrough;
 - `CODE_WALKTHROUGH.zh-CN.md`: concise Chinese walkthrough;
 - `REPRODUCIBILITY.md` and `PROVENANCE.md`: release caveats and source audit.
@@ -45,8 +49,8 @@ GitHub Pages link above is the intended public entry point.
 
 ## License
 
-Site source is released under Apache License 2.0. The included visualization
-is copyright 2026 Hanyu Meng, all rights reserved, and is not covered by the
-source license. The license also does not grant rights to datasets, recordings,
-annotations, checkpoints, or other generated media; see
+Site source is released under Apache License 2.0. The manuscript PDF and
+included figures remain author-owned research materials and are not covered by
+the source license. The license also does not grant rights to datasets,
+recordings, annotations, checkpoints, or other generated media; see
 `assets/manifest.json` for details.
