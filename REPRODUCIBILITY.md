@@ -13,6 +13,8 @@ and the manuscript's tables have not been rerun.
 - [x] PagCT and note-level BiLSTM Post-VA implementations.
 - [x] Merged and SATB evaluation at 50/100 ms onset tolerance.
 - [x] Manuscript Figure 3 generation path and matching example identifier.
+- [x] Figure 3 source recording linked to the official YouChorale metadata and
+      opened from its original host without redistributing an audio file.
 - [x] Validation/test probability separation and validation-default threshold search.
 - [x] Public paths, declared dependencies, upstream attribution, and release scan.
 - [x] Data-free PawCT forward/union/loss-backward smoke test.

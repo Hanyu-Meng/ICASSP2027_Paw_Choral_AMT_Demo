@@ -8,7 +8,8 @@ Singing Voice Assignment.”**
 
 PawCT transcribes one mixed choral recording into note-level soprano, alto,
 tenor, and bass parts. This dependency-free academic project page presents the
-method, manuscript-reported results, and the paper's qualitative comparison.
+method, complete manuscript-reported result tables, the paper's qualitative
+comparison, and a link to its corresponding source recording.
 
 ## Scientific status
 
@@ -25,8 +26,9 @@ access-controlled while its experiment provenance is being frozen.
 - `CODE_WALKTHROUGH.zh-CN.md`: concise Chinese walkthrough;
 - `REPRODUCIBILITY.md` and `PROVENANCE.md`: release caveats and source audit.
 
-No YouChorale audio, source MIDI, annotations, model checkpoints, or
-probability files are distributed here.
+No YouChorale audio file, source MIDI, annotation, model checkpoint, or
+probability file is distributed here. The qualitative example links to the
+corresponding recording at its original YouTube host.
 
 ## Local preview
 

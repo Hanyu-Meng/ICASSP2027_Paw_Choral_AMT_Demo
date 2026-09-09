@@ -13,5 +13,18 @@
       "contents": "Ground truth, PawCT, PagCT, and PagCT + Post-VA piano rolls from the manuscript example",
       "rights_note": "Published here by the visualization author for research communication. No source audio, annotation file, or MIDI is redistributed. Permission is required for reuse."
     }
+  ],
+  "external_media": [
+    {
+      "kind": "linked source recording",
+      "provider": "YouTube",
+      "source_url": "https://www.youtube.com/watch?v=jd2_r4PK5dc",
+      "source_work": "Exsultate Deo",
+      "composer": "Giovanni Pierluigi da Palestrina",
+      "recording_id": "jd2_r4PK5dc",
+      "displayed_excerpt_seconds": [10, 100],
+      "stored_in_repository": false,
+      "rights_note": "Linked at the original provider. This repository does not copy or redistribute the YouChorale audio file."
+    }
   ]
 }

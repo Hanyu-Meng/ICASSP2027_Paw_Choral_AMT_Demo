@@ -67,16 +67,40 @@ h1 { max-width: 850px; margin-bottom: 18px; font-family: Georgia, "Times New Rom
 
 .table-wrap { overflow-x: auto; border: 1px solid var(--line); background: #fff; }
 table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.table-wrap.wide table { min-width: 900px; }
+.table-wrap.extra-wide table { min-width: 940px; table-layout: fixed; }
 caption { padding: 14px 18px; color: var(--muted); border-bottom: 1px solid var(--line); text-align: left; font-size: 12px; }
 th, td { padding: 13px 18px; border-bottom: 1px solid var(--line); text-align: right; }
 thead th { color: var(--muted); background: #fafbfc; font-size: 12px; font-weight: 700; }
+thead tr:first-child th[colspan] { color: var(--ink); border-bottom: 1px solid #c7ced5; text-align: center; }
 thead th:first-child, tbody th { text-align: left; }
 tbody th { font-size: 14px; font-weight: 600; }
 tbody td { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; }
 tbody tr:last-child > * { border-bottom: 0; }
 tbody tr.highlight { background: var(--blue-soft); }
+.extra-wide th, .extra-wide td { padding: 11px 5px; font-size: 11px; }
+.extra-wide thead th { font-size: 10px; }
+.extra-wide thead th:first-child { width: 174px; }
+.extra-wide tbody th { white-space: nowrap; }
+.group-row th { padding-block: 8px; color: var(--muted); background: #eef1f4; font-family: Georgia, "Times New Roman", serif; font-size: 13px; font-style: italic; font-weight: 500; }
+.result-block + .result-block { margin-top: 52px; }
+.result-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 14px; }
+.result-heading h3 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 24px; font-weight: 500; }
+.result-heading p { margin: 0; color: var(--muted); font-size: 12px; text-align: right; }
 .note { margin: 15px 0 0; color: var(--muted); font-size: 12px; }
+.results-status { margin: 34px 0 0; padding: 12px 14px; border-left: 2px solid var(--blue); color: var(--muted); background: var(--blue-soft); font-size: 12px; }
 
+.media-card { display: grid; grid-template-columns: 1.45fr 1fr; gap: 28px; align-items: center; margin: 0 0 42px; padding: 20px; border: 1px solid var(--line); background: var(--soft); }
+.source-player { display: flex; align-items: center; justify-content: center; gap: 16px; aspect-ratio: 16 / 9; padding: 24px; color: #fff; background: #1d2731; text-decoration: none; transition: background 140ms ease; }
+.source-player:hover { color: #fff; background: var(--blue); }
+.play-mark { display: grid; place-items: center; width: 48px; height: 48px; padding-left: 3px; border: 1px solid rgba(255, 255, 255, .58); border-radius: 50%; font-size: 15px; }
+.player-copy strong, .player-copy small { display: block; }
+.player-copy strong { margin-bottom: 4px; font-size: 14px; font-weight: 600; }
+.player-copy small { color: rgba(255, 255, 255, .7); font-size: 11px; }
+.media-copy h3 { margin: 0 0 12px; font-family: Georgia, "Times New Roman", serif; font-size: 25px; font-weight: 500; line-height: 1.2; }
+.media-copy > p:not(.label) { margin-bottom: 12px; color: var(--muted); font-size: 13px; }
+.media-copy code { color: var(--ink); font-size: 12px; }
+.media-copy .source-note { margin-bottom: 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 11px; }
 .comparison { margin: 0; }
 .comparison > a { display: block; border: 1px solid var(--line); background: #fff; }
 .comparison img { display: block; width: 100%; height: auto; }
@@ -104,6 +128,9 @@ footer { padding: 26px 0; border-top: 1px solid var(--line); color: var(--muted)
   .arrow { justify-self: center; transform: rotate(90deg); }
   .union-note { grid-column: auto; }
   .terms { grid-template-columns: 1fr; gap: 18px; }
+  .result-heading { align-items: start; flex-direction: column; gap: 4px; }
+  .result-heading p { text-align: left; }
+  .media-card { grid-template-columns: 1fr; }
   .reproducibility { grid-template-columns: 1fr; gap: 22px; }
   .comparison figcaption { flex-direction: column; }
   .legend { justify-content: flex-start; }
@@ -117,7 +144,10 @@ footer { padding: 26px 0; border-top: 1px solid var(--line); color: var(--muted)
   h1 { font-size: 38px; }
   .lead { font-size: 16px; }
   .text-link { width: 100%; margin: 4px 0 0; }
-  th, td { padding: 11px 13px; }
+  th, td { padding: 10px 12px; }
+  .table-wrap.wide table { min-width: 820px; }
+  .table-wrap.extra-wide table { min-width: 940px; }
+  .media-card { padding: 12px; }
   .footer-inner { flex-direction: column; gap: 6px; }
 }
 

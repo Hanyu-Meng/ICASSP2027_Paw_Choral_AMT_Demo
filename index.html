@@ -87,30 +87,88 @@
         <div class="container">
           <div class="section-title">
             <p class="label">Results</p>
-            <h2>Reported SATB transcription performance</h2>
+            <h2>Transcription results on YouChorale</h2>
           </div>
-          <p class="body-copy">PawCT-OC gives the highest mean SATB note F1 in the comparison below. RP improves frame-level tracking, while OC provides the strongest note-level result.</p>
+          <p class="body-copy">PagCT improves part-agnostic note transcription, while PawCT-OC gives the strongest mean SATB note F1 among the evaluated part-aware systems. The complete manuscript tables are reproduced below.</p>
 
-          <div class="table-wrap">
-            <table>
-              <caption>Mean performance across soprano, alto, tenor, and bass on the manuscript's YouChorale test split.</caption>
+          <article class="result-block">
+            <div class="result-heading">
+              <h3>Part-agnostic transcription</h3>
+              <p>Single-track results on the YouChorale test set.</p>
+            </div>
+            <div class="table-wrap wide">
+              <table>
+                <caption>Table 1. Part-agnostic single-track transcription results.</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" rowspan="2">Model</th>
+                    <th scope="colgroup" colspan="3">Frame</th>
+                    <th scope="colgroup" colspan="3">Onset (50 ms)</th>
+                    <th scope="colgroup" colspan="3">Onset (100 ms)</th>
+                  </tr>
+                  <tr>
+                    <th scope="col">P</th><th scope="col">R</th><th scope="col">F1</th>
+                    <th scope="col">P</th><th scope="col">R</th><th scope="col">F1</th>
+                    <th scope="col">P</th><th scope="col">R</th><th scope="col">F1</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">Onsets and Frames [3]</th><td><strong>0.806</strong></td><td>0.326</td><td>0.428</td><td><strong>0.450</strong></td><td>0.178</td><td>0.242</td><td><strong>0.688</strong></td><td>0.248</td><td>0.344</td></tr>
+                  <tr><th scope="row">MT3 [6]</th><td>0.590</td><td>0.243</td><td>0.344</td><td>0.117</td><td>0.148</td><td>0.127</td><td>0.200</td><td>0.255</td><td>0.217</td></tr>
+                  <tr><th scope="row">YourMT3+ [7]</th><td>0.529</td><td>0.423</td><td>0.457</td><td>0.145</td><td>0.119</td><td>0.127</td><td>0.252</td><td>0.207</td><td>0.221</td></tr>
+                  <tr><th scope="row">Yu et al. [1]</th><td>0.678</td><td>0.619</td><td>0.647</td><td>0.251</td><td>0.232</td><td>0.237</td><td>0.366</td><td>0.341</td><td>0.347</td></tr>
+                  <tr><th scope="row">PagCT w/o Aug.</th><td>0.690</td><td>0.833</td><td><strong>0.751</strong></td><td>0.346</td><td>0.329</td><td>0.333</td><td>0.539</td><td>0.506</td><td>0.516</td></tr>
+                  <tr class="highlight"><th scope="row">PagCT (Proposed)</th><td>0.626</td><td><strong>0.909</strong></td><td>0.738</td><td>0.398</td><td><strong>0.378</strong></td><td><strong>0.382</strong></td><td>0.597</td><td><strong>0.569</strong></td><td><strong>0.573</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">“w/o Aug.” denotes training without pitch-transposition augmentation.</p>
+          </article>
+
+          <article class="result-block">
+            <div class="result-heading">
+              <h3>Part-aware transcription</h3>
+              <p>Frame F1 and note F1 for each SATB part, their mean, and voice-assignment retention rate.</p>
+            </div>
+            <div class="table-wrap extra-wide">
+              <table>
+                <caption>Table 2. Part-aware frame-level and note-level transcription results.</caption>
               <thead>
                 <tr>
-                  <th scope="col">System</th>
-                  <th scope="col">Note F1 ↑</th>
-                  <th scope="col">Frame F1 ↑</th>
+                  <th scope="col" rowspan="2">Model</th>
+                  <th scope="colgroup" colspan="2">Soprano</th>
+                  <th scope="colgroup" colspan="2">Alto</th>
+                  <th scope="colgroup" colspan="2">Tenor</th>
+                  <th scope="colgroup" colspan="2">Bass</th>
+                  <th scope="colgroup" colspan="2">Average</th>
+                  <th scope="colgroup" colspan="2">VA Rate (%)</th>
+                </tr>
+                <tr>
+                  <th scope="col">Fr.</th><th scope="col">Nt.</th>
+                  <th scope="col">Fr.</th><th scope="col">Nt.</th>
+                  <th scope="col">Fr.</th><th scope="col">Nt.</th>
+                  <th scope="col">Fr.</th><th scope="col">Nt.</th>
+                  <th scope="col">Fr.</th><th scope="col">Nt.</th>
+                  <th scope="col">Fr.</th><th scope="col">Nt.</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><th scope="row">PawCT w/o union</th><td>0.190</td><td>0.379</td></tr>
-                <tr><th scope="row">PawCT</th><td>0.217</td><td>0.458</td></tr>
-                <tr><th scope="row">PawCT-RP</th><td>0.209</td><td><strong>0.510</strong></td></tr>
-                <tr class="highlight"><th scope="row">PawCT-OC</th><td><strong>0.225</strong></td><td>0.503</td></tr>
-                <tr><th scope="row">PagCT + Post-VA</th><td>0.175</td><td>0.489</td></tr>
+                <tr class="group-row"><th colspan="13" scope="rowgroup">End-to-end settings</th></tr>
+                <tr><th scope="row">*YourMT3+ [7]</th><td>0.371</td><td>0.083</td><td>0.297</td><td>0.068</td><td>0.294</td><td>0.073</td><td>0.371</td><td>0.093</td><td>0.333</td><td>0.079</td><td>72.87</td><td>62.20</td></tr>
+                <tr><th scope="row">*Yu et al. [1]</th><td>0.528</td><td>0.183</td><td><u>0.451</u></td><td>0.151</td><td>0.436</td><td>0.138</td><td>0.560</td><td>0.186</td><td>0.494</td><td>0.165</td><td><strong>76.35</strong></td><td><strong>69.62</strong></td></tr>
+                <tr><th scope="row">PawCT w/o union-loss</th><td>0.417</td><td>0.192</td><td>0.338</td><td>0.169</td><td>0.343</td><td>0.178</td><td>0.419</td><td>0.222</td><td>0.379</td><td>0.190</td><td>51.36</td><td>49.74</td></tr>
+                <tr><th scope="row">PawCT</th><td>0.530</td><td><u>0.228</u></td><td>0.430</td><td><u>0.191</u></td><td>0.429</td><td><u>0.197</u></td><td>0.552</td><td><u>0.252</u></td><td>0.458</td><td><u>0.217</u></td><td>62.06</td><td>56.81</td></tr>
+                <tr><th scope="row">PawCT-RP</th><td><strong>0.542</strong></td><td>0.210</td><td><strong>0.453</strong></td><td>0.185</td><td><strong>0.458</strong></td><td>0.194</td><td><strong>0.585</strong></td><td>0.247</td><td><strong>0.510</strong></td><td>0.209</td><td><u>69.11</u></td><td>54.71</td></tr>
+                <tr class="highlight"><th scope="row">PawCT-OC (Proposed)</th><td>0.535</td><td><strong>0.231</strong></td><td>0.447</td><td><strong>0.197</strong></td><td>0.451</td><td><strong>0.208</strong></td><td>0.578</td><td><strong>0.264</strong></td><td>0.503</td><td><strong>0.225</strong></td><td>68.16</td><td><u>58.90</u></td></tr>
+                <tr class="group-row"><th colspan="13" scope="rowgroup">Two-stage settings</th></tr>
+                <tr><th scope="row">PagCT + Post-VA</th><td>0.501</td><td>0.180</td><td>0.439</td><td>0.145</td><td>0.447</td><td>0.156</td><td>0.568</td><td>0.219</td><td>0.489</td><td>0.175</td><td>66.26</td><td>45.81</td></tr>
               </tbody>
             </table>
           </div>
-          <p class="note">Note F1 uses a 50 ms onset tolerance. These are manuscript-reported values and have not yet been regenerated from this public repository snapshot.</p>
+            <p class="note">Note results use onset F1 with a 50 ms tolerance. * denotes baselines adapted for part-aware transcription. VA Rate = F1<sub>average</sub> / F1<sub>part-agnostic</sub> × 100%. Bold and underline follow the manuscript's best and second-best emphasis.</p>
+          </article>
+
+          <p class="results-status">These values are reported in the manuscript and have not yet been regenerated from this public repository snapshot.</p>
         </div>
       </section>
 
@@ -120,6 +178,22 @@
           <h2>Transcription of <em>Exsultate Deo</em></h2>
         </div>
         <p class="body-copy">The figure compares the ground truth with PawCT-OC, part-agnostic PagCT, and the two-stage PagCT + Post-VA baseline. Color denotes the assigned choral part.</p>
+
+        <div class="media-card">
+          <a class="source-player" href="https://www.youtube.com/watch?v=jd2_r4PK5dc&amp;t=10s" aria-label="Listen to the Exsultate Deo source recording on YouTube, starting at 10 seconds">
+            <span class="play-mark" aria-hidden="true">▶</span>
+            <span class="player-copy">
+              <strong>Listen to the source recording</strong>
+              <small>Opens on YouTube at 00:10</small>
+            </span>
+          </a>
+          <div class="media-copy">
+            <p class="label">Corresponding audio</p>
+            <h3><em>Exsultate Deo</em> · Palestrina</h3>
+            <p>The linked recording opens at the beginning of the 10–100 s passage shown in Figure 3. Recording ID: <code>jd2_r4PK5dc</code>.</p>
+            <p class="source-note">The recording remains hosted by its <a href="https://www.youtube.com/watch?v=jd2_r4PK5dc&amp;t=10s">original YouTube source</a>; no YouChorale audio file is stored or redistributed by this repository.</p>
+          </div>
+        </div>
 
         <figure class="comparison">
           <a href="assets/exsultate-deo-four-panel.png" aria-label="Open the full-resolution transcription comparison">
@@ -145,7 +219,7 @@
             <h2>Release status</h2>
           </div>
           <div>
-            <p>The public page does not redistribute YouChorale audio, annotations, MIDI, checkpoints, or probability files. Exact experiment provenance is being frozen alongside the implementation.</p>
+            <p>The corresponding recording is linked at its original YouTube source. This repository does not redistribute YouChorale audio, annotations, MIDI, checkpoints, or probability files. Exact experiment provenance is being frozen alongside the implementation.</p>
             <p class="resource-links"><a href="REPRODUCIBILITY.md">Audit</a><a href="PROVENANCE.md">Provenance</a><a href="CODE_WALKTHROUGH.md">Code walkthrough</a></p>
           </div>
         </div>
